@@ -1,0 +1,2 @@
+# ChilliSource.Core
+ChilliSource.Core

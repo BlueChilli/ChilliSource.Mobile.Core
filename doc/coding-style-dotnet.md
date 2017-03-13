@@ -1,6 +1,8 @@
-# Naming Guidelines #
+# Codin style for ChilliSource .NET frameworks #
 
-## General ##
+## Naming Guidelines ##
+
+### General ###
 
 * use PascalCasing for all types and methods, except private fields
 * use camelCasing for parameters and private fields
@@ -12,17 +14,17 @@
 * avoid single letter variable names except in short pieces of code like lambda identifiers and loop variables
 * avoid identifiers that conflict with C# keywords and .NET types
 
-## Types ##
+### Types ###
 
 * use noun phrases to name types
 * consider ending the name of a derived class with the name of the base class, e.g. `ArgumentOutOfRangeException`
 
-## Interfaces ##
+### Interfaces ###
 
 * prefix interfaces with an 'I'
 * prefer using adjective phrases to name interfaces
 
-## Properties ##
+### Properties ###
 
 * use noun phrases to name properties
 * name boolean properties with an affirmative phrase, e.g. `CanSeek` instead of `CannotSeek`
@@ -31,13 +33,13 @@
 * prefer adjective + noun phrasing e.g. CreatedDate not DateCreated
 * don't use 'On' or 'At' in property names e.g. CreatedDate not CreatedOn
 
-## Fields ##
+### Fields ###
 
 * use camel casing for private fields
 * use underscore to prefix private fields e.g. _firstName;
 * use PascalCasing for constants
 
-## Methods ##
+### Methods ###
 
 * use verb phrases to name methods, e.g. GetStream() instead of Stream()
 * avoid parameter information in the method name e.g. GetUserByName()
@@ -45,7 +47,7 @@
 * use descriptive parameter names
 * consider using names based on a parmeter's meaning rather than its type
 
-## Events ##
+### Events ###
 
 * use verb phrases to name events
 * use the present and past tense to indicate when the events occurred, e.g. `Closed` and `Closing`
@@ -53,7 +55,7 @@
 `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`
 * add the 'EventArgs' suffix to the name of event argument classes
 
-# File Organization #
+## File Organization ##
 
 * specify namespace imports at the top of the file, outside of `namespace` declarations
 * strongly prefer placing each public type in a separate file, however multiple internal classes are allowed per file
@@ -63,16 +65,16 @@
 * for non-code files keep new code and changes consistent with the style in the existing files
 * if a file happens to differ in style from these guidelines the existing style in that file takes precedence
 
-## Spacing ##
+### Spacing ###
 
 * use four spaces of indentation instead of tabs
 * avoid more than one empty line at any time
 * avoid spurious free spaces, e.g. avoid `if (someVar == 0)...`, where the dots mark the spurious free spaces
 * for properties and methods spanning more than one line (including attributes and comments), add an empty line to separate it from the rest of the code
 
-# Type Design Guidelines #
+## Type Design Guidelines ##
 
-## General Type Design ##
+### General Type Design ###
 
 * always specify the visibility of members, even if it's the default e.g. `private string _foo` not `string _foo` 
 * specify the visibility modifier first, e.g. `public abstract` not `abstract public`
@@ -81,18 +83,18 @@
 * use [Allman style](http://en.wikipedia.org/wiki/Indent_style#Allman_style) braces, where each brace begins on a new line, even for single line statements. This increases code readability and maintainability, and reduces the likelihood of bugs.
 * for internal classes that need to be visible to unit tests, use the `InternalVisibleTo` attribute 
 
-## Fields ##
+### Fields ###
 
 * set the visibility of fields to private
 * use properties to expose fields to outside the encompassing type
 
-## Properties ##
+### Properties ###
 
 * use properties as 'smart fields' with only simple operations that are not CPU or I/O intensive - use methods instead
 * do not create set-only properties - use methods instead
 * if a getter can throw an exception, consider redesigning the property to be a method
 
-## Exceptions ##
+### Exceptions ###
 
 * code flow / logic should not rely on exceptions
 * use specific exception subclasses to indicate what the problem is instead of the base Exception class
@@ -100,13 +102,13 @@
 * if handling specific exception make sure application can recover gracefully from exception
 * when throwing exceptions use `throw;` instead of `throw ex;` to maintain stack trace
 
-## Enums ##
+### Enums ###
 
 * use an enum to strongly type parameters, properties, and return values that represent sets of values
 * favor using an enum instead of static constants
 * name simple enums with singular noun phrases and flag enums with plural noun phrases
 
-## Comments ##
+### Comments ###
 
 * add a summary comment for each public type
 * add a summary comment for each public method, with the only exception being extremely trivial methods where the comment would not add any value
@@ -127,7 +129,7 @@
 * mention new method or changes required in the `Obsolete` attribute
 * always delete code instead of commenting out code
 
-# To Review #
+## To Review ##
 
 * assign the zero-value to the element which should be used as the default value for the enum
 https://blogs.msdn.microsoft.com/kcwalina/2004/05/18/design-guidelines-update-enum-design/

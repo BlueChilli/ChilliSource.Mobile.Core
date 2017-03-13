@@ -82,6 +82,7 @@
 * use ```nameof(...)``` instead of ```"..."``` whenever possible and relevant
 * use [Allman style](http://en.wikipedia.org/wiki/Indent_style#Allman_style) braces, where each brace begins on a new line, even for single line statements. This increases code readability and maintainability, and reduces the likelihood of bugs.
 * for internal classes that need to be visible to unit tests, use the `InternalVisibleTo` attribute 
+* when using the `Obsolete` attribute, mention the replacement method to be used
 
 ### Fields ###
 
@@ -107,27 +108,6 @@
 * use an enum to strongly type parameters, properties, and return values that represent sets of values
 * favor using an enum instead of static constants
 * name simple enums with singular noun phrases and flag enums with plural noun phrases
-
-### Comments ###
-
-* add a summary comment for each public type
-* add a summary comment for each public method, with the only exception being extremely trivial methods where the comment would not add any value
-
-* comment public methods that are non-trivial to cover one or more of the following as relevant:
-	* purpose
-	* expected behaviour
-	* hidden behaviour
-	* pre and post conditions
-	* usage
-	* important considerations
-	
-* use comments to describe the intention and purpose of complex internal code
-* consider refactoring internal code that requires comments to make the code more clear
-* consider commenting complex business rules
-* prefer explaining the 'why' instead of the 'what' of the code
-* comment default values of properties
-* mention new method or changes required in the `Obsolete` attribute
-* always delete code instead of commenting out code
 
 ## To Review ##
 

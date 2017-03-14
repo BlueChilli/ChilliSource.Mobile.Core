@@ -4188,14 +4188,14 @@
     ".NETStandard,Version=v1.6": []
   },
   "packageFolders": {
-    "C:\\Users\\bluechilli\\.nuget\\packages\\": {}
+    "/Users/vlad/.nuget/packages/": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Projects\\ChilliSource.Core\\src\\ChilliSource.Core\\ChilliSource.Core.csproj",
+      "projectUniqueName": "/Users/vlad/Documents/Projects/ChilliSource.Core/src/ChilliSource.Core/ChilliSource.Core.csproj",
       "projectName": "ChilliSource.Core",
-      "projectPath": "C:\\Projects\\ChilliSource.Core\\src\\ChilliSource.Core\\ChilliSource.Core.csproj",
-      "projectJsonPath": "C:\\Projects\\ChilliSource.Core\\src\\ChilliSource.Core\\project.json",
+      "projectPath": "/Users/vlad/Documents/Projects/ChilliSource.Core/src/ChilliSource.Core/ChilliSource.Core.csproj",
+      "projectJsonPath": "/Users/vlad/Documents/Projects/ChilliSource.Core/src/ChilliSource.Core/project.json",
       "projectStyle": "ProjectJson"
     },
     "dependencies": {

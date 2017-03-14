@@ -47,3 +47,4 @@ RequestReduceContent/
 # Don't include upgrade report
 UpgradeLog.XML
 _UpgradeReport_Files/
+ChilliSource.Core.userprefs

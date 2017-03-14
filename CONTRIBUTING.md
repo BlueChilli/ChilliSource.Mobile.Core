@@ -33,32 +33,13 @@ All pull requests are reviewed. Here is a checklist of requirements:
 
 * add a summary comment for each public type
 * add a summary comment for each public method, with the only exception being extremely trivial methods where the comment would not add any value
-* comment public methods that are non-trivial to cover one or more of the following as relevant:
-	* purpose
-	* expected behaviour
-	* hidden behaviour
-	* pre- and post-conditions
-	* usage
-	* important considerations
+* comment public methods that are non-trivial to cover where relevant the purpose, usage, expected and hidden behaviours, and any other important considerations.	
 * use comments to describe the intention and purpose of complex internal code
 * consider refactoring internal code that requires comments to make the code more clear
 * consider commenting complex business rules
 * prefer explaining the 'why' instead of the 'what' of the code
 * comment default values of properties
 * always delete code instead of commenting out code
-
-### Versioning ###
-
-Major.Minor.Patch
-
-Major = definite breaking change
-Minor = not a change to api public contract, but internal change that could potentially affect functionality
-Patch = no breaking changes
-
-#### New Versions of Existing APIs ####
-
-* use a name similar to the old API when creating new versions of an existing API
-* prefer adding a suffix rather than a prefix to indicate a new version of an existing API
 
 ### Commit Messages ###
 
@@ -76,3 +57,4 @@ below.
 
 Fixes #*issue number*
 ```
+

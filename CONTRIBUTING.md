@@ -9,12 +9,12 @@ ChilliSource is using the [GitFlow](https://datasift.github.io/gitflow/Introduci
 
 To contribute, please follow these steps:
 
-1. fork the `develop` branch of the repo
-3. resolve an issue
+1. fork the repo
+3. resolve issues on the `develop` branch or create a feature branch if necessary
 4. write unit tests as applicable to ensure proper test coverage
 4. run `./build.sh` and fix any errors or failed unit tests
-5. submit a pull request
-6. rebase your branch onto the latest version of the `develop` branch. Please refer to [this guide](https://github.com/edx/edx-platform/wiki/How-to-Rebase-a-Pull-Request) if you are new to git.
+5. rebase your branch onto the latest version of the `develop` branch and merge any conflicts. Please refer to [this guide](https://github.com/edx/edx-platform/wiki/How-to-Rebase-a-Pull-Request) if you are new to git.
+6. submit a pull request
 
 All pull requests are reviewed. Here is a checklist of requirements:
 

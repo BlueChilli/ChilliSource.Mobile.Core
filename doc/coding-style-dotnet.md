@@ -109,7 +109,7 @@
 * favor using an enum instead of static constants
 * name simple enums with singular noun phrases and flag enums with plural noun phrases
 
-## To Review ##
+#### New Versions of Existing API Methods ####
 
-* assign the zero-value to the element which should be used as the default value for the enum
-https://blogs.msdn.microsoft.com/kcwalina/2004/05/18/design-guidelines-update-enum-design/
+* use a name similar to the old API when creating new versions of an existing API
+* prefer adding a suffix rather than a prefix to indicate a new version of an existing API

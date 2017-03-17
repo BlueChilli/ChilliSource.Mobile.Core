@@ -22,7 +22,7 @@ Pre-release builds are published to the [ChilliSource MyGet gallery](https://blu
 
 ### Contribution ###
 
-Please see the [Contribution Guide](CONTRIBUTING.md).
+Please see the [Contribution Guide](.github/CONTRIBUTING.md).
 
 ### License ###
 

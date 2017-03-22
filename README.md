@@ -16,10 +16,6 @@ All ChilliSource.Core libraries are available via NuGet. [Insert links here].
 
 See the [releases](https://github.com/BlueChilli/ChilliSource.Core/releases).
 
-### Pre-Release Builds ###
-
-Pre-release builds are published to the [ChilliSource MyGet gallery](https://bluechilli.myget.org/gallery).
-
 ### Contribution ###
 
 Please see the [Contribution Guide](.github/CONTRIBUTING.md).
@@ -30,11 +26,6 @@ ChilliSource.Mobile is licensed under the [MIT license](LICENSE).
 
 ### Feedback and Contact ###
 
-For questions or feedback, please contact chillisource@bluechilli.com.
+For questions or feedback, please contact [chillisource@bluechilli.com](mailto:chillisource@bluechilli.com).
 
-### Related Projects ###
-
-* [ChilliSource.Cloud](https://github.com/BlueChilli/ChilliSource.Cloud)
-* [ChilliSource.Mobile](https://github.com/BlueChilli/ChilliSource.Mobile)
-* [ChilliSource.Web](https://github.com/BlueChilli/frecl)
 

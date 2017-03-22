@@ -13,7 +13,7 @@ using Xunit;
 using ChilliSource.Core;
 using System.Linq;
 
-namespace Core
+namespace Tests
 {
 	public class EnumExtensionsTests
 	{

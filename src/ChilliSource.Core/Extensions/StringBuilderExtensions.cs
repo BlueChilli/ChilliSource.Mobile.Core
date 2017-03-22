@@ -22,14 +22,14 @@ namespace ChilliSource.Core
             return @this.AppendFormat(format, args).AppendLine();
         }
 
-        public static StringBuilder AppendWhen(this StringBuilder @this, Func<bool> predicate, Func<StringBuilder, StringBuilder> fn)
+		public static StringBuilder AppendWhen(this StringBuilder @this, Func<bool> predicate, Func<StringBuilder, StringBuilder> function)
         {
-            return predicate() ? fn(@this) : @this;
+            return predicate() ? function(@this) : @this;
         }
 
-        public static StringBuilder AppendSequence<T>(this StringBuilder @this, IEnumerable<T> seq, Func<StringBuilder, T, StringBuilder> fn)
+		public static StringBuilder AppendSequence<T>(this StringBuilder @this, IEnumerable<T> sequence, Func<StringBuilder, T, StringBuilder> function)
         {
-            return seq.Aggregate(@this, fn);
+			return sequence.Aggregate(@this, function);
         }
     }
 }

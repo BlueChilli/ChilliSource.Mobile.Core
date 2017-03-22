@@ -14,7 +14,7 @@ using Xunit;
 using ChilliSource.Core;
 using System.IO;
 
-namespace Core
+namespace Tests
 {
 	public class StringExtensionTests
 	{

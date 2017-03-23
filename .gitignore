@@ -48,3 +48,5 @@ RequestReduceContent/
 UpgradeLog.XML
 _UpgradeReport_Files/
 ChilliSource.Core.userprefs
+tools/
+artifacts/

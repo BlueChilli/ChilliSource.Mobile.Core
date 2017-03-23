@@ -1,5 +1,5 @@
 @echo off
-bash -c "./license-header-cmd.sh %1"
+sh -c "./license-header-cmd.sh %1"
 del artifacts\*.* /S /Q
 del *.tmp.* /S /Q
 mkdir tools

@@ -14,7 +14,7 @@ using ChilliSource.Core;
 using Xunit;
 
 
-namespace Core
+namespace Tests
 {
 	
 	//public class ObservableRangeCollectionTests

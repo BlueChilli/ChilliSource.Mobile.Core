@@ -10,11 +10,11 @@ To report a bug or feature request, please log a new issue [here](https://github
 To contribute, please follow these steps:
 
 1. fork the repo (or sync your repo if you already have a fork)
-2. create a topic branch in your forked repo
+2. create a topic branch from `develop` in your forked repo
 3. resolve issues on your fork's topic branch
 4. ensure that your code complies with the [checklist](#checklist) below
 5. run `./build.sh` and fix any errors or failed unit tests
-6. submit a pull request to our `develop` branch
+6. submit a pull request to our `develop` branch (please see [here](https://help.github.com/articles/about-pull-requests/) for help with pull requests)
 
 ### Checklist ###
 

@@ -22,7 +22,9 @@ namespace ChilliSource.Core
 		/// <param name="bytes">Byte data</param>
 		public static string ToHexString(this byte[] bytes)
 		{
+
 			return bytes == null ? null : string.Concat(bytes.Select(x => x.ToString("X2")).ToArray());
+
 		}
 	}
 }

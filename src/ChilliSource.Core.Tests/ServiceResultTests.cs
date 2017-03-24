@@ -14,7 +14,7 @@ using Xunit;
 using ChilliSource.Core;
 using System.Threading.Tasks;
 
-namespace Core
+namespace Tests
 {
     
     public class ServiceResultTests

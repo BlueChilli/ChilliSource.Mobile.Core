@@ -1,93 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FD8F4044-EBB9-4E2B-B7B0-BEEEC1D7298E}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ChilliSource.Core</RootNamespace>
+    <TargetFrameworks>netstandard1.6;net46</TargetFrameworks>
+    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
     <AssemblyName>ChilliSource.Core</AssemblyName>
-    <DefaultLanguage>en-US</DefaultLanguage>
-    <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\..\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <RootNamespace>ChilliSource.Core</RootNamespace>
+    <Description>Core library for ChilliSource</Description>
+    <Company>BlueChilli Technology Pty Ltd</Company>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <RepositoryUrl>https://github.com/BlueChilli/ChilliSource.Core</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/BlueChilli/ChilliSource.Core/blob/master/LICENSE</PackageLicenseUrl>
+    <DebugType>portable</DebugType>
+    <Authors>BlueChilli Technology</Authors>
+    <SourceLinkUrl>https://github.com/BlueChilli/ChilliSource.Core/</SourceLinkUrl>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+    <GenerateAssemblyCopyRightAttribute>false</GenerateAssemblyCopyRightAttribute>
     <NoWarn></NoWarn>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType></DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>..\..\bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.6\ChilliSource.Core.xml</DocumentationFile>
     <NoWarn></NoWarn>
   </PropertyGroup>
+
   <ItemGroup>
-    <None Include="project.json" />
-    <!-- A reference to the entire .NET Framework is automatically included -->
+    <Compile Include="..\..\CommonAssemblyInfo.cs" Link="Properties\CommonAssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes\Annotations.cs" />
-    <Compile Include="Attributes\Description.cs" />
-    <Compile Include="Contracts\IActivityIndicator.cs" />
-    <Compile Include="Contracts\IEnvironmentInformation.cs" />
-    <Compile Include="Contracts\ILogger.cs" />
-    <Compile Include="DataStructures\ObservableRangeCollection.cs" />
-    <Compile Include="DataStructures\Optionals\ActionExtensions.cs" />
-    <Compile Include="DataStructures\Optionals\IOptional.cs" />
-    <Compile Include="DataStructures\Optionals\None.cs" />
-    <Compile Include="DataStructures\Optionals\Option.cs" />
-    <Compile Include="DataStructures\Optionals\OptionExtensions.cs" />
-    <Compile Include="DataStructures\Optionals\Some.cs" />
-    <Compile Include="DataStructures\Optionals\SomeExtensions.cs" />
-    <Compile Include="DataStructures\Optionals\Unit.cs" />
-    <Compile Include="DataStructures\Optionals\ValueObject.cs" />
-    <Compile Include="Entities\EnvironmentInformation.cs" />
-    <Compile Include="Entities\ObservableObject.cs" />
-    <Compile Include="Entities\Results\IOperationResult.cs" />
-    <Compile Include="Entities\Results\IServiceResult.cs" />
-    <Compile Include="Entities\Results\OperationResult.cs" />
-    <Compile Include="Entities\Results\OperationResultAsyncExtensions.cs" />
-    <Compile Include="Entities\Results\OperationResultExtensions.cs" />
-    <Compile Include="Entities\Results\ServiceResult.cs" />
-    <Compile Include="Entities\Results\ServiceResultAsyncExtensions.cs" />
-    <Compile Include="Entities\Results\ServiceResultExtensions.cs" />
-    <Compile Include="Enums\Orientation.cs" />
-    <Compile Include="Extensions\ByteArrayExtensions.cs" />
-    <Compile Include="Extensions\CollectionExtensions.cs" />
-    <Compile Include="Extensions\DateTimeExtensions.cs" />
-    <Compile Include="Extensions\EnumExtensions.cs" />
-    <Compile Include="Extensions\GeometryExtensions.cs" />
-    <Compile Include="Extensions\StreamExtensions.cs" />
-    <Compile Include="Extensions\StringBuilderExtensions.cs" />
-    <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="Extensions\TaskExtensions.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <DotNetCliToolReference Include="dotnet-sourcelink" Version="2.0.2" />
+    <DotNetCliToolReference Include="dotnet-sourcelink-git" Version="2.0.2" />
+    <PackageReference Include="SourceLink.Create.GitHub" Version="2.0.2" PrivateAssets="all" />
   </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
-  <PropertyGroup>
-    <NuGetTargetMoniker>.NETStandard,Version=v1.6</NuGetTargetMoniker>
-  </PropertyGroup>
 </Project>

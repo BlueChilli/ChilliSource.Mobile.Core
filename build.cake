@@ -304,7 +304,8 @@ Task("RunUnitTests")
 	{
 		var settings = new DotNetCoreTestSettings
 		{
-			Configuration = configuration
+			Configuration = configuration,
+			Framework = isRunningOnUnix ? "netstandard1.6" : null
 		};
 
 		DotNetCoreTest(settings, "./src/ChilliSource.Core.Tests/ChilliSource.Core.Tests.csproj",  new XUnit2Settings {

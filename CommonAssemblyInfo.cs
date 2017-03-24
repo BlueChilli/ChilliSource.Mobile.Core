@@ -8,6 +8,6 @@ using System.Reflection;
 [assembly: AssemblyProduct("ChilliSource Core")]
 [assembly: AssemblyVersion("1.0.0")]
 [assembly: AssemblyFileVersion("1.0.0")]
-[assembly: AssemblyInformationalVersion("1.0.0-alpha.23+Branch.develop.Sha.a470f09276ebda85ff2551e6beb609c54c402249")]
+[assembly: AssemblyInformationalVersion("1.0.0-alpha.24+Branch.develop.Sha.50cebc4ace73176165754696e62d36ce499403d0")]
 [assembly: AssemblyCopyright("Copyright (c) BlueChilli Technology PTY LTD")]
 

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.6</TargetFrameworks>
+    <TargetFrameworks>netstandard1.6;net45</TargetFrameworks>
     <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
     <AssemblyName>ChilliSource.Core</AssemblyName>
     <RootNamespace>ChilliSource.Core</RootNamespace>
@@ -11,7 +11,7 @@
     <FileVersion>1.0.0</FileVersion>
     <RepositoryUrl>https://github.com/BlueChilli/ChilliSource.Core</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/BlueChilli/ChilliSource.Core/blob/master/LICENSE</PackageLicenseUrl>
-    <DebugType>portable</DebugType>
+    <DebugType>pdbonly</DebugType>
     <Authors>BlueChilli Technology</Authors>
     <SourceLinkUrl>https://github.com/BlueChilli/ChilliSource.Core/</SourceLinkUrl>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
@@ -20,6 +20,8 @@
     <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
     <GenerateAssemblyCopyRightAttribute>false</GenerateAssemblyCopyRightAttribute>
     <NoWarn></NoWarn>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <RuntimeIdentifiers>osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -29,10 +31,47 @@
 
   <ItemGroup>
     <Compile Include="..\..\CommonAssemblyInfo.cs" Link="Properties\CommonAssemblyInfo.cs" />
+    <Compile Include="Attributes\Annotations.cs" />
+    <Compile Include="Attributes\Description.cs" />
+    <Compile Include="Extensions\ByteArrayExtensions.cs" />
+    <Compile Include="Extensions\CollectionExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\GeometryExtensions.cs" />
+    <Compile Include="Extensions\StreamExtensions.cs" />
+    <Compile Include="Extensions\StringBuilderExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TaskExtensions.cs" />
+    <Compile Include="Contracts\IActivityIndicator.cs" />
+    <Compile Include="Contracts\IEnvironmentInformation.cs" />
+    <Compile Include="Contracts\ILogger.cs" />
+    <Compile Include="DataStructures\ObservableRangeCollection.cs" />
+    <Compile Include="DataStructures\Optionals\ActionExtensions.cs" />
+    <Compile Include="DataStructures\Optionals\IOptional.cs" />
+    <Compile Include="DataStructures\Optionals\None.cs" />
+    <Compile Include="DataStructures\Optionals\Option.cs" />
+    <Compile Include="DataStructures\Optionals\OptionExtensions.cs" />
+    <Compile Include="DataStructures\Optionals\Some.cs" />
+    <Compile Include="DataStructures\Optionals\SomeExtensions.cs" />
+    <Compile Include="DataStructures\Optionals\Unit.cs" />
+    <Compile Include="DataStructures\Optionals\ValueObject.cs" />
+    <Compile Include="Entities\EnvironmentInformation.cs" />
+    <Compile Include="Entities\ObservableObject.cs" />
+    <Compile Include="Entities\Results\IOperationResult.cs" />
+    <Compile Include="Entities\Results\IServiceResult.cs" />
+    <Compile Include="Entities\Results\OperationResult.cs" />
+    <Compile Include="Entities\Results\OperationResultAsyncExtensions.cs" />
+    <Compile Include="Entities\Results\OperationResultExtensions.cs" />
+    <Compile Include="Entities\Results\ServiceResult.cs" />
+    <Compile Include="Entities\Results\ServiceResultAsyncExtensions.cs" />
+    <Compile Include="Entities\Results\ServiceResultExtensions.cs" />
+    <Compile Include="Enums\Orientation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="dotnet-sourcelink" Version="2.0.2" />
     <DotNetCliToolReference Include="dotnet-sourcelink-git" Version="2.0.2" />
     <PackageReference Include="SourceLink.Create.GitHub" Version="2.0.2" PrivateAssets="all" />
   </ItemGroup>
+  
 </Project>

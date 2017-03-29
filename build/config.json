@@ -1,7 +1,7 @@
 {
 	"productName" : "ChilliSource Mobile Core",
 	"projectName" : "ChilliSource.Mobile.Core",
-	"githubOwner": "BlueChili",
+	"githubOwner": "BlueChilli",
 	"githubRepository": "ChilliSource.Mobile.Core",
 	"packageWhiteList": ["ChilliSource.Mobile.Core"],
 	"solutionFile" : "../src/ChilliSource.Mobile.Core.sln",

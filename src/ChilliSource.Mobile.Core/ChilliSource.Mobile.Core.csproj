@@ -1,19 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.6;net45</TargetFrameworks>
+    <TargetFrameworks>net45;net45</TargetFrameworks>
     <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
-    <AssemblyName>ChilliSource.Core</AssemblyName>
-    <RootNamespace>ChilliSource.Core</RootNamespace>
-    <Description>Core library for ChilliSource</Description>
+    <AssemblyName>ChilliSource.Mobile.Core</AssemblyName>
+    <RootNamespace>ChilliSource.Mobile.Core</RootNamespace>
+    <Description>Core library for ChilliSource.Mobile</Description>
     <Company>BlueChilli Technology Pty Ltd</Company>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <FileVersion>1.0.0</FileVersion>
-    <RepositoryUrl>https://github.com/BlueChilli/ChilliSource.Core</RepositoryUrl>
-    <PackageLicenseUrl>https://github.com/BlueChilli/ChilliSource.Core/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/BlueChilli/ChilliSource.Mobile.Core</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/BlueChilli/ChilliSource.Mobile.Core/blob/master/LICENSE</PackageLicenseUrl>
     <DebugType>pdbonly</DebugType>
     <Authors>BlueChilli Technology</Authors>
-    <SourceLinkUrl>https://github.com/BlueChilli/ChilliSource.Core/</SourceLinkUrl>
+    <SourceLinkUrl>https://github.com/BlueChilli/ChilliSource.Mobile.Core/</SourceLinkUrl>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
@@ -25,12 +25,12 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard1.6\ChilliSource.Core.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard1.6\ChilliSource.Mobile.Core.xml</DocumentationFile>
     <NoWarn></NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\CommonAssemblyInfo.cs" Link="Properties\CommonAssemblyInfo.cs" />
+    <Compile Include="..\CommonAssemblyInfo.cs" Link="Properties\CommonAssemblyInfo.cs" />
     <Compile Include="Attributes\Annotations.cs" />
     <Compile Include="Attributes\Description.cs" />
     <Compile Include="Extensions\ByteArrayExtensions.cs" />

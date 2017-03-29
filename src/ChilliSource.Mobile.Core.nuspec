@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>ChilliSource.Mobile.Core</id>
+    <version>$version$</version>
+    <title>ChilliSource Mobile Core</title>
+    <description>Core Library for ChilliSource.Mobile framework</description>
+    <authors>$authors$</authors>
+    <owners>$owners$</owners>
+    <requireLicenseAcceptance>$requireLicenseAcceptance$</requireLicenseAcceptance>
+    <copyright>$copyright$</copyright>
+    <projectUrl>$projectUrl$</projectUrl>    
+    <licenseUrl>$licenceUrl$</licenseUrl>
+    <releaseNotes>$releaseNotes$</releaseNotes>
+    <tags>$tags$</tags>
+  </metadata>
+  <files>
+    <file src="src/ChilliSource.Core/bin/Release/netstandard1.6/ChilliSource.Mobile.Core.dll" target="lib\netstandard1.6" /> 
+    <file src="src/ChilliSource.Core/bin/Release/netstandard1.6/ChilliSource.Mobile.Core.xml" target="lib\netstandard1.6" />   
+    <file src="src/ChilliSource.Core/bin/Release/netstandard1.6/ChilliSource.Mobile.Core.pdb" target="lib\netstandard1.6" />   
+    <file src="src/ChilliSource.Core/bin/Release/netstandard1.6/ChilliSource.Mobile.Core.deps.json" target="lib\netstandard1.6" />   
+    <file src="src/ChilliSource.Core/bin/Release/net45/ChilliSource.Mobile.Core.dll" target="lib\net45" /> 
+    <file src="src/ChilliSource.Core/bin/Release/net45/ChilliSource.Mobile.Core.xml" target="lib\net45" />   
+    <file src="src/ChilliSource.Core/bin/Release/net45/ChilliSource.Mobile.Core.pdb" target="lib\net45" />   
+  </files>
+</package>

@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netcoreapp1.0</TargetFrameworks>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <TargetFramework>net45</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ChilliSource.Core\ChilliSource.Core.csproj" />
+    <ProjectReference Include="..\ChilliSource.Mobile.Core\ChilliSource.Mobile.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

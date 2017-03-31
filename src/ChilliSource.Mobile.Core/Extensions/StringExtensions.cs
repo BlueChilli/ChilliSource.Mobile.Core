@@ -12,7 +12,7 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace ChilliSource.Core
+namespace ChilliSource.Mobile.Core
 {
 	public static class StringExtensions
 	{

@@ -9,7 +9,7 @@ See the LICENSE file in the project root for more information.
 #endregion
 
 using System;
-namespace ChilliSource.Core
+namespace ChilliSource.Mobile.Core
 {
 	/// <summary>
 	/// Contract for <see cref="T:ChilliSource.Mobile.Core.ServiceResult"/>

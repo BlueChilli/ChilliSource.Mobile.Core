@@ -11,7 +11,7 @@ See the LICENSE file in the project root for more information.
 using System;
 using System.Reflection;
 
-namespace ChilliSource.Core
+namespace ChilliSource.Mobile.Core
 {
 	public abstract class ValueObject<T> : IEquatable<T> where T : ValueObject<T>
 	{

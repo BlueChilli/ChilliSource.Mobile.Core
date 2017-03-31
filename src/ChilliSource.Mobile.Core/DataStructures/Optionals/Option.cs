@@ -19,7 +19,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ChilliSource.Core
+namespace ChilliSource.Mobile.Core
 {
 	/// <summary>
 	/// Helper class to simplify syntax through automatic casting from Option to Option<T>

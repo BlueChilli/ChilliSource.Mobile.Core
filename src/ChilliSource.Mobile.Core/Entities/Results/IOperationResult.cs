@@ -11,7 +11,7 @@ See the LICENSE file in the project root for more information.
 using System;
 using System.Collections.Generic;
 
-namespace ChilliSource.Core
+namespace ChilliSource.Mobile.Core
 {
 	/// <summary>
 	/// Contract for <see cref="T:ChilliSource.Mobile.Core.OperationResult"/>

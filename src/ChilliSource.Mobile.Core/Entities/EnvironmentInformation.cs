@@ -8,7 +8,7 @@ See the LICENSE file in the project root for more information.
 
 #endregion
 
-namespace ChilliSource.Core
+namespace ChilliSource.Mobile.Core
 {
 	/// <summary>
 	/// Stores app and platform info for logging and API communication

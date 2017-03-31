@@ -9,7 +9,7 @@ See the LICENSE file in the project root for more information.
 #endregion
 
 using System;
-namespace ChilliSource.Core
+namespace ChilliSource.Mobile.Core
 {
 	public static partial class GeometryExtensions
 	{

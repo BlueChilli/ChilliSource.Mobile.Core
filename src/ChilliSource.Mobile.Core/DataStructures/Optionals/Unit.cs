@@ -17,7 +17,7 @@ License:	MIT https://github.com/louthy/language-ext/blob/master/LICENSE)
 using System;
 using System.Threading.Tasks;
 
-namespace ChilliSource.Core
+namespace ChilliSource.Mobile.Core
 {
 	/// <summary>
 	/// A unit type is a type that allows only one value (and thus can hold no information)

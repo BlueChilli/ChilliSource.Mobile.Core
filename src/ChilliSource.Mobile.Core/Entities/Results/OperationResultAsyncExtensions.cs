@@ -11,7 +11,7 @@ See the LICENSE file in the project root for more information.
 using System;
 using System.Threading.Tasks;
 
-namespace ChilliSource.Core
+namespace ChilliSource.Mobile.Core
 {
 	/// <summary>
 	/// Functional async extensions for handling the various outcome 

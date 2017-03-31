@@ -16,6 +16,7 @@ using System.Text.RegularExpressions;
 #tool "GitVersion.CommandLine"
 #tool "GitLink"
 using Cake.Common.Build.TeamCity;
+using Cake.Core.IO;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -125,6 +126,13 @@ Action<string> RestorePackages = (solution) =>
     DotNetCoreRestore(solution);
 };
 
+Action<DirectoryPathCollection> PrintDirectories = (directories) => 
+{
+	foreach(var directory in directories)
+	{
+		Information("{0}\n", directory);
+	}
+};
 
 Action<string, string> Package = (nuspec, basePath) =>
 {
@@ -259,9 +267,14 @@ Setup((context) =>
         else
         {
              Information("Not running on TeamCity");
-        }
+        }		
 
-         CleanDirectories(artifactDirectory);
+		DeleteFiles("../src/**/*.tmp");
+		DeleteFiles("../src/**/*.tmp.*");
+
+		CleanDirectories(GetDirectories("../src/**/obj"));
+		CleanDirectories(GetDirectories("../src/**/bin"));		
+		CleanDirectory(Directory(artifactDirectory));		
 });
 
 Teardown((context) =>
@@ -274,6 +287,7 @@ Teardown((context) =>
 //////////////////////////////////////////////////////////////////////
 
 Task("Build")
+	.IsDependentOn("AddLicense")
     .IsDependentOn("RestorePackages")
     .IsDependentOn("UpdateAssemblyInfo")
     .Does (() =>
@@ -284,6 +298,19 @@ Task("Build")
 	WriteErrorLog("Build failed", "Build", exception);
 });
 
+Task("AddLicense")
+	.Does(() =>{
+		var settings = new ProcessSettings{ Arguments = "-c \"./license-header-cmd.sh\"", RedirectStandardError = true, RedirectStandardOutput = true };
+		var process  = StartAndReturnProcess("sh", settings);		
+		process.WaitForExit();
+
+		if (process.GetExitCode() != 0){
+			throw new Exception("Adding license failed.");
+		}
+	})
+	.ReportError(exception =>{
+		Information("Make sure the bash (sh) directory is set in your environment path.");
+	});
 
 Task("UpdateAssemblyInfo")
     .Does (() =>
@@ -529,6 +556,11 @@ Task("Default")
 
 });
 
+// Used to test Setup / Teardown
+Task("None")
+	.Does(() => {
+
+	});
 
 //////////////////////////////////////////////////////////////////////
 // EXECUTION

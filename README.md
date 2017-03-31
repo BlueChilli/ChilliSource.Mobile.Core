@@ -14,7 +14,7 @@ All ChilliSoure.Mobile.Core libraries are available via NuGet. [Insert links her
 
 ### Releases ###
 
-See the [releases](https://github.com/BlueChilli/ChilliSoure.Mobile.Core/releases).
+See the [releases](https://github.com/BlueChilli/ChilliSource.Mobile.Core/releases).
 
 ### Contribution ###
 

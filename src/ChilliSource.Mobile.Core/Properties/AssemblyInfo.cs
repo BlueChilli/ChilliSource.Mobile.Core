@@ -8,5 +8,3 @@ See the LICENSE file in the project root for more information.
 
 #endregion
 
-using System.Resources;
-using System.Reflection;

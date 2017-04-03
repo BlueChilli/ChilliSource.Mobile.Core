@@ -34,7 +34,6 @@
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <DefineConstants>$(DefineConstants);__IOS__</DefineConstants>
     <DebugType>full</DebugType>
-    <LanguageTargets>$(MSBuildProgramFiles32)\MSBuild\Xamarin\iOS\Xamarin.iOS.CSharp.targets</LanguageTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFramework)' == 'MonoAndroid70'">
     <TargetFrameworkIdentifier>MonoAndroid</TargetFrameworkIdentifier>
@@ -43,7 +42,6 @@
     <DebugType>full</DebugType>
     <DefineConstants>$(DefineConstants);__ANDROID__</DefineConstants>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
-    <LanguageTargets>$(MSBuildProgramFiles32)\MSBuild\Xamarin\Android\Xamarin.Android.CSharp.targets</LanguageTargets>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\CommonAssemblyInfo.cs" Link="Properties\CommonAssemblyInfo.cs" />

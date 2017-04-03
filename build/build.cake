@@ -88,6 +88,10 @@ var isTagged = !String.IsNullOrEmpty(branch) && branch.ToUpper().Contains("TAGS"
 var buildConfName = EnvironmentVariable("TEAMCITY_BUILDCONF_NAME"); //teamCity.Environment.Build.BuildConfName
 var buildNumber = GetEnvironmentInteger("BUILD_NUMBER");
 var isReleaseBranch = StringComparer.OrdinalIgnoreCase.Equals("master", buildConfName);
+var shouldAddLicenseHeader = false;
+if(!string.IsNullOrEmpty(EnvironmentVariable("ShouldAddLicenseHeader"))) {
+	shouldAddLicenseHeader = bool.Parse(EnvironmentVariable("ShouldAddLicenseHeader"));
+}
 
 var githubOwner = config.Value<string>("githubOwner");
 var githubRepository = config.Value<string>("githubRepository");
@@ -299,9 +303,11 @@ Task("Build")
 });
 
 Task("AddLicense")
+	.WithCriteria(() => shouldAddLicenseHeader)
 	.Does(() =>{
-		var settings = new ProcessSettings{ Arguments = "-c \"./license-header-cmd.sh\"", RedirectStandardError = true, RedirectStandardOutput = true };
-		var process  = StartAndReturnProcess("sh", settings);		
+		var command = isRunningOnWindows ? "sh" : "./license-header-cmd.sh";
+		var settings = isRunningOnWindows ? new ProcessSettings { Arguments = "-c \"./license-header-cmd.sh\"", RedirectStandardError = true, RedirectStandardOutput = true } : new ProcessSettings { RedirectStandardError = true, RedirectStandardOutput = true };
+		var process  = StartAndReturnProcess(command, settings);		
 		process.WaitForExit();
 
 		if (process.GetExitCode() != 0){

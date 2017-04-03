@@ -22,5 +22,11 @@
     <file src="src/ChilliSource.Mobile.Core/bin/Release/net45/ChilliSource.Mobile.Core.dll" target="lib\net45" /> 
     <file src="src/ChilliSource.Mobile.Core/bin/Release/net45/ChilliSource.Mobile.Core.xml" target="lib\net45" />   
     <file src="src/ChilliSource.Mobile.Core/bin/Release/net45/ChilliSource.Mobile.Core.pdb" target="lib\net45" />   
+    <file src="src/ChilliSource.Mobile.Core/bin/Release/Xamarin.iOS10/ChilliSource.Mobile.Core.dll" target="lib\Xamarin.iOS10" /> 
+    <file src="src/ChilliSource.Mobile.Core/bin/Release/Xamarin.iOS10/ChilliSource.Mobile.Core.xml" target="lib\Xamarin.iOS10" />   
+    <file src="src/ChilliSource.Mobile.Core/bin/Release/Xamarin.iOS10/ChilliSource.Mobile.Core.pdb" target="lib\Xamarin.iOS10" />     
+    <file src="src/ChilliSource.Mobile.Core/bin/Release/MonoAndroid70/ChilliSource.Mobile.Core.dll" target="lib\MonoAndroid70" /> 
+    <file src="src/ChilliSource.Mobile.Core/bin/Release/MonoAndroid70/ChilliSource.Mobile.Core.xml" target="lib\MonoAndroid70" />   
+    <file src="src/ChilliSource.Mobile.Core/bin/Release/MonoAndroid70/ChilliSource.Mobile.Core.pdb" target="lib\MonoAndroid70" />     
   </files>
 </package>

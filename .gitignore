@@ -48,5 +48,12 @@ RequestReduceContent/
 UpgradeLog.XML
 _UpgradeReport_Files/
 ChilliSource.Core.userprefs
-tools/
-artifacts/
+
+# Build related
+#Ignores the folder and its contents
+build/artifacts/
+#Does not ignore the 'tools' folder itself, only its contents
+build/tools/**
+#Removes packages.config from the ignore list, the 'tools' folder must not be ignored for this to work
+!build/tools/packages.config
+*.userprefs

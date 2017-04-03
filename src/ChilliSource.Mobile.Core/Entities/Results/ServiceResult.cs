@@ -12,7 +12,7 @@ using System;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChilliSource.Core
+namespace ChilliSource.Mobile.Core
 {
 
 	/// <summary>

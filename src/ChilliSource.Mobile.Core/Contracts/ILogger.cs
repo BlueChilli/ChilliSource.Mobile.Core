@@ -17,7 +17,7 @@ License:	Apache License Version 2.0 (https://github.com/serilog/serilog/blob/dev
 using System;
 using System.Collections.Generic;
 
-namespace ChilliSource.Core
+namespace ChilliSource.Mobile.Core
 {
 	/// <summary>
 	/// Contract for implementation independant logging of information, errors, warnings

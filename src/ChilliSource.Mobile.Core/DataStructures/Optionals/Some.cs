@@ -15,7 +15,7 @@ License:	MIT https://github.com/louthy/language-ext/blob/master/LICENSE)
 */
 
 using System;
-namespace ChilliSource.Core
+namespace ChilliSource.Mobile.Core
 {
 	/// <summary>
 	/// Represents a concrete value in a given <see cref="T:ChilliSource.Mobile.Core.Optional"/>

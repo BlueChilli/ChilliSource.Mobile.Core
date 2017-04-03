@@ -12,7 +12,7 @@ using System;
 using System.IO;
 using Xunit;
 
-using ChilliSource.Core;
+using ChilliSource.Mobile.Core;
 
 namespace Tests
 {

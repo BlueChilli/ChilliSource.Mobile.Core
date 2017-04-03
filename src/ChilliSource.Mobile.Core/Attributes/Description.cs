@@ -16,7 +16,7 @@ See the LICENSE file in the project root for more information.
 //------------------------------------------------------------------------------
 
 using System;
-namespace ChilliSource.Core
+namespace ChilliSource.Mobile.Core
 {
 	/// <summary>
 	/// Specifies a description for a property or event

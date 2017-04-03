@@ -17,7 +17,7 @@ License:	MIT https://github.com/louthy/language-ext/blob/master/LICENSE)
 using System;
 using System.Threading.Tasks;
 
-namespace ChilliSource.Core
+namespace ChilliSource.Mobile.Core
 {
 	/// <summary>
 	/// Functional query extensions for <see cref="T:ChilliSource.Mobile.Core.Optional"/>

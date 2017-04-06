@@ -19,14 +19,8 @@
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ByteArrayExtensionTests.cs" />
-    <Compile Include="DateTimeExtensionTests.cs" />
-    <Compile Include="EnumExtensionTests.cs" />
-    <Compile Include="GeometryExtensionTests.cs" />
     <Compile Include="ObservableRangeCollectionTests.cs" />
     <Compile Include="OperationResultTests.cs" />
     <Compile Include="ServiceResultTests.cs" />
-    <Compile Include="StreamExtensionTests.cs" />
-    <Compile Include="StringExtensionTests.cs" />
   </ItemGroup>
 </Project>

@@ -47,15 +47,6 @@
     <Compile Include="..\CommonAssemblyInfo.cs" Link="Properties\CommonAssemblyInfo.cs" />
     <Compile Include="Attributes\Annotations.cs" />
     <Compile Include="Attributes\Description.cs" />
-    <Compile Include="Extensions\ByteArrayExtensions.cs" />
-    <Compile Include="Extensions\CollectionExtensions.cs" />
-    <Compile Include="Extensions\DateTimeExtensions.cs" />
-    <Compile Include="Extensions\EnumExtensions.cs" />
-    <Compile Include="Extensions\GeometryExtensions.cs" />
-    <Compile Include="Extensions\StreamExtensions.cs" />
-    <Compile Include="Extensions\StringBuilderExtensions.cs" />
-    <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="Extensions\TaskExtensions.cs" />
     <Compile Include="Contracts\IActivityIndicator.cs" />
     <Compile Include="Contracts\IEnvironmentInformation.cs" />
     <Compile Include="Contracts\ILogger.cs" />

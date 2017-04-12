@@ -21,7 +21,6 @@
     <GenerateAssemblyCopyRightAttribute>false</GenerateAssemblyCopyRightAttribute>
     <NoWarn></NoWarn>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <RuntimeIdentifiers>osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

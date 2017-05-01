@@ -76,8 +76,7 @@
     <DotNetCliToolReference Include="dotnet-sourcelink" Version="2.0.2" />
     <DotNetCliToolReference Include="dotnet-sourcelink-git" Version="2.0.2" />
     <PackageReference Include="SourceLink.Create.GitHub" Version="2.0.2" PrivateAssets="all" />
-    <PackageReference Include="ChilliSource.Core.Extensions" Version="1.0.1" />
-  </ItemGroup>
+   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'Xamarin.iOS10' ">
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -103,5 +102,20 @@
     <Compile Include="Platforms\Android\**\*.cs" />
     <Compile Include="Resources\**\*.cs" />
     <AndroidResource Include="Resources\**\*.xml" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.6'">
+    <PackageReference Include="ChilliSource.Core.Extensions">
+      <Version>1.0.4</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'Xamarin.iOS10'">
+    <PackageReference Include="ChilliSource.Core.Extensions">
+      <Version>1.0.4</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'MonoAndroid70'">
+    <PackageReference Include="ChilliSource.Core.Extensions">
+      <Version>1.0.4</Version>
+    </PackageReference>
   </ItemGroup>
 </Project>

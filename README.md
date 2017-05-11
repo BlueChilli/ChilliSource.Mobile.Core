@@ -4,7 +4,7 @@
 
 This project is part of the ChilliSource framework developed by [BlueChilli](https://github.com/BlueChilli).
 
-### Summary ### 
+### Summary ###  
 
 ChilliSoure.Mobile.Core is a collection of .NET Standard libraries containing reusable helpers, extensions, and abstractions that are shared across all .NET based ChilliSource frameworks. 
 

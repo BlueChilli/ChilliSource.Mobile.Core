@@ -57,3 +57,4 @@ build/tools/**
 #Removes packages.config from the ignore list, the 'tools' folder must not be ignored for this to work
 !build/tools/packages.config
 *.userprefs
+src/.droidres/

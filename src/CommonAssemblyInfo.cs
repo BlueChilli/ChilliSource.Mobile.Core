@@ -8,6 +8,6 @@ using System.Reflection;
 [assembly: AssemblyProduct("ChilliSource Mobile Core")]
 [assembly: AssemblyVersion("1.0.0")]
 [assembly: AssemblyFileVersion("1.0.0")]
-[assembly: AssemblyInformationalVersion("1.0.0-alpha.58+Branch.develop.Sha.070ade47245859c95297c97917eacd2ff4d89a3c")]
+[assembly: AssemblyInformationalVersion("1.0.0-alpha.59+Branch.develop.Sha.49982d351d73687d27f871a401a120e8314cddba")]
 [assembly: AssemblyCopyright("Copyright Blue Chilli Technology Pty Ltd 2017")]
 

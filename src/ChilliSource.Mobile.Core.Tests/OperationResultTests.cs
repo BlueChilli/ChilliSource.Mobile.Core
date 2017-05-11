@@ -20,7 +20,7 @@ namespace Tests
 	{
 		class Dummy
 		{
-
+            public string Name { get; set; }
 		}
 
 		[Fact]

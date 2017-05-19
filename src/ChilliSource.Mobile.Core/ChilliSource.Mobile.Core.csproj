@@ -1,0 +1,106 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.6;Xamarin.iOS10;MonoAndroid403;net462;</TargetFrameworks>
+    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
+    <AssemblyName>ChilliSource.Mobile.Core</AssemblyName>
+    <RootNamespace>ChilliSource.Mobile.Core</RootNamespace>
+    <Description>Core library for ChilliSource.Mobile</Description>
+    <Company>Blue Chilli Technology Pty Ltd</Company>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <RepositoryUrl>https://github.com/BlueChilli/ChilliSource.Mobile.Core</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/BlueChilli/ChilliSource.Mobile.Core/blob/master/LICENSE</PackageLicenseUrl>
+    <DebugType>pdbonly</DebugType>
+    <Authors>Blue Chilli Technology</Authors>
+    <SourceLinkUrl>https://github.com/BlueChilli/ChilliSource.Mobile.Core/</SourceLinkUrl>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+    <GenerateAssemblyCopyRightAttribute>false</GenerateAssemblyCopyRightAttribute>
+    <NoWarn></NoWarn>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.6\ChilliSource.Mobile.Core.xml</DocumentationFile>
+    <NoWarn></NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'Xamarin.iOS10'">
+    <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <DefineConstants>$(DefineConstants);__IOS__</DefineConstants>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'MonoAndroid403'">
+    <TargetFrameworkIdentifier>MonoAndroid</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <DebugType>full</DebugType>
+    <DefineConstants>$(DefineConstants);__ANDROID__</DefineConstants>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs" Link="Properties\CommonAssemblyInfo.cs" />
+    <Compile Include="Attributes\Annotations.cs" />
+    <Compile Include="Attributes\Description.cs" />
+    <Compile Include="Contracts\IActivityIndicator.cs" />
+    <Compile Include="Contracts\IEnvironmentInformation.cs" />
+    <Compile Include="Contracts\ILogger.cs" />
+    <Compile Include="DataStructures\ObservableRangeCollection.cs" />
+    <Compile Include="DataStructures\Optionals\ActionExtensions.cs" />
+    <Compile Include="DataStructures\Optionals\IOptional.cs" />
+    <Compile Include="DataStructures\Optionals\None.cs" />
+    <Compile Include="DataStructures\Optionals\Option.cs" />
+    <Compile Include="DataStructures\Optionals\OptionExtensions.cs" />
+    <Compile Include="DataStructures\Optionals\Some.cs" />
+    <Compile Include="DataStructures\Optionals\SomeExtensions.cs" />
+    <Compile Include="DataStructures\Optionals\Unit.cs" />
+    <Compile Include="Entities\EnvironmentInformation.cs" />
+    <Compile Include="Entities\ObservableObject.cs" />
+    <Compile Include="Entities\Results\IOperationResult.cs" />
+    <Compile Include="Entities\Results\IServiceResult.cs" />
+    <Compile Include="Entities\Results\OperationResult.cs" />
+    <Compile Include="Entities\Results\OperationResultAsyncExtensions.cs" />
+    <Compile Include="Entities\Results\OperationResultExtensions.cs" />
+    <Compile Include="Entities\Results\ServiceResult.cs" />
+    <Compile Include="Entities\Results\ServiceResultAsyncExtensions.cs" />
+    <Compile Include="Entities\Results\ServiceResultExtensions.cs" />
+    <Compile Include="Enums\Orientation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="dotnet-sourcelink" Version="2.0.2" />
+    <DotNetCliToolReference Include="dotnet-sourcelink-git" Version="2.0.2" />
+    <PackageReference Include="ChilliSource.Core.Extensions" Version="1.0.0" />
+    <PackageReference Include="SourceLink.Create.GitHub" Version="2.0.2" PrivateAssets="all" />
+   </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'Xamarin.iOS10' ">
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Compile Include="Managers\**" />
+    <Compile Include="Factories\**" />
+    <Compile Include="Platforms\iOS\**" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'MonoAndroid403' ">
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Compile Include="Managers\**" />
+    <Compile Include="Factories\**" />
+    <Compile Include="Platforms\Android\**" />
+    <Compile Include="Resources\**\*.cs" />
+    <AndroidResource Include="Resources\**\*.xml" />
+  </ItemGroup>
+</Project>

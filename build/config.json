@@ -1,0 +1,14 @@
+{
+	"productName" : "ChilliSource Mobile Core",
+	"projectName" : "ChilliSource.Mobile.Core",
+	"githubOwner": "BlueChilli",
+	"githubRepository": "ChilliSource.Mobile.Core",
+	"packageWhiteList": ["ChilliSource.Mobile.Core"],
+	"solutionFile" : "../src/ChilliSource.Mobile.Core.sln",
+	"tags": [ "ChilliSource", "ChilliSource Mobile Core"],
+	"authors" : ["Blue Chilli Technology Pty Ltd"],
+	"copyright" : "Copyright Blue Chilli Technology Pty Ltd 2017",
+	"iconUrl": "https://avatars0.githubusercontent.com/u/5924219?v=3&s=200",
+	"testProjectPath": "../src/ChilliSource.Mobile.Core.Tests/ChilliSource.Mobile.Core.Tests.csproj",
+	"nuspecRootPath" : "../"
+}

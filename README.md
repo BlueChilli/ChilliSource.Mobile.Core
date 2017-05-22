@@ -179,7 +179,7 @@ FilePathFactory.BuildTempPath(fileName);
 
 ## Installation ##
 
-The ChilliSoure.Mobile.Core library is available via NuGet.
+The library is available via NuGet [here](https://www.nuget.org/packages/ChilliSource.Mobile.Core).
 
 ## Releases ##
 

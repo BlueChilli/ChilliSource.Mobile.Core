@@ -22,6 +22,9 @@ issue-labels-include:
 issue-labels-exclude:
 - Build
 issue-labels-alias:
-    - name:    Documentation
+    - name:    documentation
       header:  Documentation
       plural:  Documentation
+    - name:    xamarin-forms
+      header:  Xamarin Forms
+      plural:  Xamarin Forms

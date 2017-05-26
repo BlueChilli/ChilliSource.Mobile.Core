@@ -144,43 +144,6 @@ namespace ChilliSource.Mobile.Core
 			return result;
 		}
 
-  //      /// <summary>
-  //      /// Returns a <see cref="ServiceResult"/> instance representing the 
-  //      /// execution state of the provided <paramref name="task"/>
-  //      /// </summary>
-  //      /// <param name="task"></param>
-  //      /// <returns></returns>
-		//public static async Task<ServiceResult> WaitForResult(this Task task)
-		//{
-		//	try
-		//	{
-		//		await task;
-		//		return ServiceResult.AsSuccess();
-		//	}
-		//	catch (Exception ex)
-		//	{
-		//		return ServiceResult.AsFailure(ex);
-		//	}
-		//}
-
-  //      /// <summary>
-  //      /// Returns a <see cref="ServiceResult"/> instance representing the 
-  //      /// execution state of the provided <paramref name="task"/>
-  //      /// </summary>
-  //      /// <typeparam name="T"></typeparam>
-  //      /// <param name="task"></param>
-  //      /// <returns></returns>
-		//public static async Task<ServiceResult<T>> WaitForResult<T>(this Task<T> task)
-		//{
-		//	try
-		//	{
-		//		var result = await task;
-		//		return ServiceResult<T>.AsSuccess(result);
-		//	}
-		//	catch (Exception ex)
-		//	{
-		//		return ServiceResult<T>.AsFailure(ex);
-		//	}
-		//}
+  
 	}
 }

@@ -14,11 +14,6 @@
     <DebugType>pdbonly</DebugType>
     <Authors>Blue Chilli Technology</Authors>
     <SourceLinkUrl>https://github.com/BlueChilli/ChilliSource.Mobile.Core/</SourceLinkUrl>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
-    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
-    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
-    <GenerateAssemblyCopyRightAttribute>false</GenerateAssemblyCopyRightAttribute>
     <NoWarn></NoWarn>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
@@ -43,7 +38,6 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\CommonAssemblyInfo.cs" Link="Properties\CommonAssemblyInfo.cs" />
     <Compile Include="Attributes\Annotations.cs" />
     <Compile Include="Attributes\Description.cs" />
     <Compile Include="Contracts\IActivityIndicator.cs" />

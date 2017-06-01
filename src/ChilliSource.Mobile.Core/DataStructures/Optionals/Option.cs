@@ -45,6 +45,7 @@ namespace ChilliSource.Mobile.Core
 	/// <summary>
 	/// Functional programming inspired implementation of optionals 
     /// to explicity represent a variable's state of having and not having a value and prevent null reference exceptions
+    /// </summary>
 	public struct Option<T> : IOptional, IComparable<Option<T>>, IComparable<T>, IEquatable<Option<T>>, IEquatable<T>
 	{
 		private Option(T value)

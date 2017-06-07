@@ -191,6 +191,7 @@ Action<string> build = (solution) =>
     			.WithProperty("NoWarn", "1591") // ignore missing XML doc warnings
 				.WithProperty("TreatWarningsAsErrors", treatWarningsAsErrors.ToString())
 			    .WithProperty("Version", nugetVersion.ToString())
+			    .WithProperty("Title",  "\"" + productName + "\"")
 			    .WithProperty("Authors",  "\"" + string.Join(" ", authors) + "\"")
 			    .WithProperty("Copyright",  "\"" + copyright + "\"")
 			    .WithProperty("PackageProjectUrl",  "\"" + githubUrl + "\"")
@@ -198,7 +199,7 @@ Action<string> build = (solution) =>
 			    .WithProperty("PackageLicenseUrl",  "\"" + licenceUrl + "\"")
 			    .WithProperty("PackageTags",  "\"" + string.Join(" ", tags) + "\"")
 			    .WithProperty("PackageReleaseNotes",  "\"" +  string.Format("{0}/releases", githubUrl) + "\"")
-				.SetVerbosity(Verbosity.Minimal)
+				.SetVerbosity(Verbosity.Diagnostic)
 				.SetNodeReuse(false);
 
 				var msBuildLogger = GetMSBuildLoggerArguments();

@@ -82,7 +82,7 @@ var isRunningOnUnix = IsRunningOnUnix();
 var isRunningOnWindows = IsRunningOnWindows();
 var teamCity = BuildSystem.TeamCity;
 var branch = EnvironmentVariable("Git_Branch");
-var isPullRequest = !String.IsNullOrEmpty(branch) && branch.ToUpper().Contains("ref/pull");
+var isPullRequest = !String.IsNullOrEmpty(branch) && branch.ToLower().Contains("refs/pull");
 var projectName =  EnvironmentVariable("TEAMCITY_PROJECT_NAME"); //  teamCity.Environment.Project.Name;
 var isRepository = StringComparer.OrdinalIgnoreCase.Equals(productName, projectName);
 var isTagged = !String.IsNullOrEmpty(branch) && branch.ToUpper().Contains("TAGS");
@@ -116,7 +116,7 @@ Action LogTeamCityInformations = () => {
 			Build Configuration Name: {1}
 			TeamCity Project Name: {2}
 			BranchName: {3}",
-			BuildSystem.TeamCity.Environment.PullRequest.IsPullRequest,
+			isPullRequest,
 			BuildSystem.TeamCity.Environment.Build.BuildConfName,
 			BuildSystem.TeamCity.Environment.Project.Name,
 			branch

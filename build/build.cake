@@ -109,6 +109,23 @@ string buildVersion;
 // Version
 Action SetGitVersionData = () => {
 
+	if (BuildSystem.TeamCity.IsRunningOnTeamCity)
+	{
+		Information(
+			@"Environment:
+			PullRequest: {0}
+			Build Configuration Name: {1}
+			TeamCity Project Name: {2}",
+			BuildSystem.TeamCity.Environment.PullRequest.IsPullRequest,
+			BuildSystem.TeamCity.Environment.Build.BuildConfName,
+			BuildSystem.TeamCity.Environment.Project.Name
+			);
+	}
+	else
+	{
+		Information("Not running on TeamCity");
+	}
+
 	if(!isPullRequest) {
 		var gitVersion = GitVersion();
 		majorMinorPatch = gitVersion.MajorMinorPatch;

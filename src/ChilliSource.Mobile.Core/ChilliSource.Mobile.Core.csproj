@@ -7,12 +7,13 @@
     <RootNamespace>ChilliSource.Mobile.Core</RootNamespace>
     <Description>Core library for ChilliSource.Mobile</Description>
     <Company>Blue Chilli Technology Pty Ltd</Company>
+    <Authors>Blue Chilli Technology Pty Ltd</Authors>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <FileVersion>1.0.0</FileVersion>
     <RepositoryUrl>https://github.com/BlueChilli/ChilliSource.Mobile.Core</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/BlueChilli/ChilliSource.Mobile.Core/blob/master/LICENSE</PackageLicenseUrl>
     <DebugType>pdbonly</DebugType>
-    <Authors>Blue Chilli Technology</Authors>
+    
     <SourceLinkUrl>https://github.com/BlueChilli/ChilliSource.Mobile.Core/</SourceLinkUrl>
     <NoWarn></NoWarn>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>

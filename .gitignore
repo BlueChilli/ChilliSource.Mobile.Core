@@ -20,3 +20,4 @@ build/tools/
 !build/tools/packages.config
 *.orig
 .vs
+src/.droidres/

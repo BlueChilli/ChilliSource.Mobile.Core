@@ -82,7 +82,7 @@ var isRunningOnUnix = IsRunningOnUnix();
 var isRunningOnWindows = IsRunningOnWindows();
 var teamCity = BuildSystem.TeamCity;
 var branch = EnvironmentVariable("Git_Branch");
-var isPullRequest = !String.IsNullOrEmpty(branch) && branch.ToUpper().Contains("PULL-REQUEST"); //teamCity.Environment.PullRequest.IsPullRequest;
+var isPullRequest = !String.IsNullOrEmpty(branch) && branch.ToLower().Contains("refs/pull");
 var projectName =  EnvironmentVariable("TEAMCITY_PROJECT_NAME"); //  teamCity.Environment.Project.Name;
 var isRepository = StringComparer.OrdinalIgnoreCase.Equals(productName, projectName);
 var isTagged = !String.IsNullOrEmpty(branch) && branch.ToUpper().Contains("TAGS");
@@ -100,12 +100,32 @@ var githubUrl = string.Format("https://github.com/{0}/{1}", githubOwner, githubR
 var licenceUrl = string.Format("{0}/blob/master/LICENSE", githubUrl);
 
 // Version
-var gitVersion = GitVersion();
-var majorMinorPatch = gitVersion.MajorMinorPatch;
-var semVersion = gitVersion.SemVer;
-var informationalVersion = gitVersion.InformationalVersion;
-var nugetVersion = gitVersion.NuGetVersion;
-var buildVersion = gitVersion.FullBuildMetaData;
+string majorMinorPatch;
+string semVersion;
+string informationalVersion ;
+string nugetVersion;
+string buildVersion;
+
+Action SetGitVersionData = () => {
+
+	if(!isPullRequest) {
+		var gitVersion = GitVersion();
+		majorMinorPatch = gitVersion.MajorMinorPatch;
+		semVersion = gitVersion.SemVer;
+		informationalVersion = gitVersion.InformationalVersion;
+		nugetVersion = gitVersion.NuGetVersion;
+		buildVersion = gitVersion.FullBuildMetaData;
+	}
+	else {
+		majorMinorPatch = "1.0.0";
+		semVersion = "0";
+		informationalVersion ="1.0.0";
+		nugetVersion = "1.0.0";
+		buildVersion = "alpha";
+	}
+};
+
+SetGitVersionData();
 var copyright = config.Value<string>("copyright");
 var authors = config.Value<JArray>("authors").Values<string>().ToList();
 var iconUrl = config.Value<string>("iconUrl");
@@ -191,7 +211,6 @@ Action<string> build = (solution) =>
     			.WithProperty("NoWarn", "1591") // ignore missing XML doc warnings
 				.WithProperty("TreatWarningsAsErrors", treatWarningsAsErrors.ToString())
 			    .WithProperty("Version", nugetVersion.ToString())
-			    .WithProperty("Title",  "\"" + productName + "\"")
 			    .WithProperty("Authors",  "\"" + string.Join(" ", authors) + "\"")
 			    .WithProperty("Copyright",  "\"" + copyright + "\"")
 			    .WithProperty("PackageProjectUrl",  "\"" + githubUrl + "\"")

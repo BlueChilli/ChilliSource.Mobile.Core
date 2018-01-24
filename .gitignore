@@ -56,3 +56,4 @@ build/artifacts/
 build/tools/**
 *.userprefs
 src/.droidres/
+!build/tools/packages.config

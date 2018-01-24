@@ -106,32 +106,6 @@ string informationalVersion ;
 string nugetVersion;
 string buildVersion;
 
-Action LogTeamCityInformations = () => {
-
-	if (BuildSystem.TeamCity.IsRunningOnTeamCity)
-	{
-		Information(
-			@"Environment:
-			PullRequest: {0}
-			Build Configuration Name: {1}
-			TeamCity Project Name: {2}
-			BranchName: {3}",
-			isPullRequest,
-			BuildSystem.TeamCity.Environment.Build.BuildConfName,
-			BuildSystem.TeamCity.Environment.Project.Name,
-			branch
-			);
-	}
-	else
-	{
-		Information("Not running on TeamCity");
-	}
-
-};
-
-LogTeamCityInformations();
-
-// Version
 Action SetGitVersionData = () => {
 
 	if(!isPullRequest) {

@@ -100,12 +100,33 @@ var githubUrl = string.Format("https://github.com/{0}/{1}", githubOwner, githubR
 var licenceUrl = string.Format("{0}/blob/master/LICENSE", githubUrl);
 
 // Version
-var gitVersion = GitVersion();
-var majorMinorPatch = gitVersion.MajorMinorPatch;
-var semVersion = gitVersion.SemVer;
-var informationalVersion = gitVersion.InformationalVersion;
-var nugetVersion = gitVersion.NuGetVersion;
-var buildVersion = gitVersion.FullBuildMetaData;
+string majorMinorPatch;
+string semVersion;
+string informationalVersion ;
+string nugetVersion;
+string buildVersion;
+
+// Version
+Action SetGitVersionData = () => {
+
+	if(!isPullRequest) {
+		var gitVersion = GitVersion();
+		majorMinorPatch = gitVersion.MajorMinorPatch;
+		semVersion = gitVersion.SemVer;
+		informationalVersion = gitVersion.InformationalVersion;
+		nugetVersion = gitVersion.NuGetVersion;
+		buildVersion = gitVersion.FullBuildMetaData;
+	}
+	else {
+		majorMinorPatch = "1.0.0";
+		semVersion = "0";
+		informationalVersion ="1.0.0";
+		nugetVersion = "1.0.0";
+		buildVersion = "alpha";
+	}
+};
+
+SetGitVersionData();
 var copyright = config.Value<string>("copyright");
 var authors = config.Value<JArray>("authors").Values<string>().ToList();
 var iconUrl = config.Value<string>("iconUrl");

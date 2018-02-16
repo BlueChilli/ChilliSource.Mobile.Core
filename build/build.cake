@@ -218,7 +218,6 @@ Action<string> build = (solution) =>
 			    .WithProperty("PackageLicenseUrl",  "\"" + licenceUrl + "\"")
 			    .WithProperty("PackageTags",  "\"" + string.Join(" ", tags) + "\"")
 			    .WithProperty("PackageReleaseNotes",  "\"" +  string.Format("{0}/releases", githubUrl) + "\"")
-				.SetVerbosity(Verbosity.Diagnostic)
 				.SetNodeReuse(false);
 
 				var msBuildLogger = GetMSBuildLoggerArguments();
@@ -398,7 +397,7 @@ Task("CreateRelease")
     .WithCriteria(() => !isPullRequest)
     .WithCriteria(() => isRepository)
     .WithCriteria(() => isReleaseBranch)
-    .WithCriteria(() => isTagged)
+    .WithCriteria(() => !isTagged)
     .WithCriteria(() => isRunningOnWindows)
     .Does (() =>
 {

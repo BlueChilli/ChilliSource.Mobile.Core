@@ -85,7 +85,7 @@ var branch = EnvironmentVariable("Git_Branch");
 var isPullRequest = !String.IsNullOrEmpty(branch) && branch.ToLower().Contains("refs/pull");
 var projectName =  EnvironmentVariable("TEAMCITY_PROJECT_NAME"); //  teamCity.Environment.Project.Name;
 var isRepository = StringComparer.OrdinalIgnoreCase.Equals(productName, projectName);
-var isTagged = !String.IsNullOrEmpty(branch) && branch.ToUpper().Contains("TAGS");
+var isTagged = !String.IsNullOrEmpty(branch) && branch.ToLower().Contains("refs/tags");
 var buildConfName = EnvironmentVariable("TEAMCITY_BUILDCONF_NAME"); //teamCity.Environment.Build.BuildConfName
 var buildNumber = GetEnvironmentInteger("BUILD_NUMBER");
 var isReleaseBranch = StringComparer.OrdinalIgnoreCase.Equals("master", buildConfName)|| StringComparer.OrdinalIgnoreCase.Equals("release", buildConfName);
@@ -218,7 +218,6 @@ Action<string> build = (solution) =>
 			    .WithProperty("PackageLicenseUrl",  "\"" + licenceUrl + "\"")
 			    .WithProperty("PackageTags",  "\"" + string.Join(" ", tags) + "\"")
 			    .WithProperty("PackageReleaseNotes",  "\"" +  string.Format("{0}/releases", githubUrl) + "\"")
-				.SetVerbosity(Verbosity.Diagnostic)
 				.SetNodeReuse(false);
 
 				var msBuildLogger = GetMSBuildLoggerArguments();

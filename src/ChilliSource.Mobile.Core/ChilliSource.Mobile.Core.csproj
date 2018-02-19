@@ -1,30 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.6;Xamarin.iOS10;MonoAndroid403;net462;</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;Xamarin.iOS10;MonoAndroid403;net462;</TargetFrameworks>
     <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
     <AssemblyName>ChilliSource.Mobile.Core</AssemblyName>
     <RootNamespace>ChilliSource.Mobile.Core</RootNamespace>
     <Description>Core library for ChilliSource.Mobile</Description>
     <Company>Blue Chilli Technology Pty Ltd</Company>
+    <Authors>Blue Chilli Technology Pty Ltd</Authors>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <FileVersion>1.0.0</FileVersion>
     <RepositoryUrl>https://github.com/BlueChilli/ChilliSource.Mobile.Core</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/BlueChilli/ChilliSource.Mobile.Core/blob/master/LICENSE</PackageLicenseUrl>
     <DebugType>pdbonly</DebugType>
-    <Authors>Blue Chilli Technology</Authors>
+    
     <SourceLinkUrl>https://github.com/BlueChilli/ChilliSource.Mobile.Core/</SourceLinkUrl>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
-    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
-    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
-    <GenerateAssemblyCopyRightAttribute>false</GenerateAssemblyCopyRightAttribute>
     <NoWarn></NoWarn>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard1.6\ChilliSource.Mobile.Core.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard2.0\ChilliSource.Mobile.Core.xml</DocumentationFile>
     <NoWarn></NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFramework)' == 'Xamarin.iOS10'">
@@ -36,14 +32,12 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFramework)' == 'MonoAndroid403'">
     <TargetFrameworkIdentifier>MonoAndroid</TargetFrameworkIdentifier>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <DebugType>full</DebugType>
     <DefineConstants>$(DefineConstants);__ANDROID__</DefineConstants>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\CommonAssemblyInfo.cs" Link="Properties\CommonAssemblyInfo.cs" />
     <Compile Include="Attributes\Annotations.cs" />
     <Compile Include="Attributes\Description.cs" />
     <Compile Include="Contracts\IActivityIndicator.cs" />
@@ -74,7 +68,7 @@
   <ItemGroup>
     <DotNetCliToolReference Include="dotnet-sourcelink" Version="2.0.2" />
     <DotNetCliToolReference Include="dotnet-sourcelink-git" Version="2.0.2" />
-    <PackageReference Include="ChilliSource.Core.Extensions" Version="1.0.0" />
+    <PackageReference Include="ChilliSource.Core.Extensions" Version="2.0.0" />
     <PackageReference Include="SourceLink.Create.GitHub" Version="2.0.2" PrivateAssets="all" />
    </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'Xamarin.iOS10' ">

@@ -21,7 +21,6 @@
     <LangVersion>default</LangVersion>
     <DefineConstants>$(DefineConstants);</DefineConstants>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(TargetFramework)' == 'Xamarin.iOS10'">
     <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>

@@ -16,6 +16,7 @@ using System.Text.RegularExpressions;
 #tool "GitReleaseManager"
 #tool "GitVersion.CommandLine"
 #tool "GitLink"
+#tool nuget:?package=vswhere
 using Cake.Common.Build.TeamCity;
 using Cake.Core.IO;
 using System.IO;
@@ -195,9 +196,16 @@ Action<string> build = (solution) =>
     Information("Building {0}", solution);
 	using(BuildBlock("Build")) 
 	{			
+		DirectoryPath vsLatest  = VSWhereLatest();
+		FilePath msBuildPathX64 = (vsLatest==null)
+                            ? null
+                            : vsLatest.CombineWithFilePath("./MSBuild/15.0/Bin/amd64/MSBuild.exe");
+
 		MSBuild(solution, settings => {
 				settings
 				.SetConfiguration(configuration);
+
+ 				settings.ToolPath = msBuildPathX64;
 
 				if(isRunningOnUnix) {
 					settings.WithTarget("restore");

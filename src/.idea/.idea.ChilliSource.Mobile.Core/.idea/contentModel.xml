@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.2.0/build/netcoreapp1.0/xunit.runner.reporters.netstandard15.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.2.0/build/netcoreapp1.0/xunit.runner.utility.netstandard15.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.2.0/build/netcoreapp1.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_ChilliSource.Mobile.Core.222395495.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="ChilliSource.Mobile.Core" t="IncludeRecursive">
+        <e p="Attributes" t="Include">
+          <e p="Annotations.cs" t="Include" />
+          <e p="Description.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ChilliSource.Mobile.Core.csproj" t="IncludeRecursive" />
+        <e p="Contracts" t="Include">
+          <e p="IActivityIndicator.cs" t="Include" />
+          <e p="IEnvironmentInformation.cs" t="Include" />
+          <e p="ILogger.cs" t="Include" />
+        </e>
+        <e p="DataStructures" t="Include">
+          <e p="ObservableRangeCollection.cs" t="Include" />
+          <e p="Optionals" t="Include">
+            <e p="ActionExtensions.cs" t="Include" />
+            <e p="IOptional.cs" t="Include" />
+            <e p="None.cs" t="Include" />
+            <e p="Option.cs" t="Include" />
+            <e p="OptionExtensions.cs" t="Include" />
+            <e p="Some.cs" t="Include" />
+            <e p="SomeExtensions.cs" t="Include" />
+            <e p="Unit.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Entities" t="Include">
+          <e p="EnvironmentInformation.cs" t="Include" />
+          <e p="ObservableObject.cs" t="Include" />
+          <e p="Results" t="Include">
+            <e p="IOperationResult.cs" t="Include" />
+            <e p="IServiceResult.cs" t="Include" />
+            <e p="OperationResult.cs" t="Include" />
+            <e p="OperationResultAsyncExtensions.cs" t="Include" />
+            <e p="OperationResultExtensions.cs" t="Include" />
+            <e p="ServiceResult.cs" t="Include" />
+            <e p="ServiceResultAsyncExtensions.cs" t="Include" />
+            <e p="ServiceResultExtensions.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Enums" t="Include">
+          <e p="Orientation.cs" t="Include" />
+        </e>
+        <e p="Factories" t="Include">
+          <e p="FilePathFactory.cs" t="Include" />
+        </e>
+        <e p="Managers" t="Include">
+          <e p="FileSystemManager.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="monoandroid81" t="Include">
+              <e p="ChilliSource.Mobile.Core.AssemblyInfo.cs" t="Include" />
+              <e p="Resource.designer.cs" t="Include" />
+            </e>
+            <e p="monoandroid90" t="Include">
+              <e p="ChilliSource.Mobile.Core.AssemblyInfo.cs" t="Include" />
+              <e p="Resource.designer.cs" t="Include" />
+            </e>
+            <e p="netstandard2.0" t="Include">
+              <e p="ChilliSource.Mobile.Core.AssemblyInfo.cs" t="Include" />
+            </e>
+            <e p="xamarinios10" t="Include">
+              <e p="ChilliSource.Mobile.Core.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Platforms" t="Include">
+          <e p="iOS" t="Include">
+            <e p="Extensions" t="Include">
+              <e p="NSDictionaryExtensions.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="AboutResources.txt" t="Include" />
+          <e p="Resource.designer.cs" t="Include" />
+          <e p="values" t="Include">
+            <e p="Strings.xml" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="ChilliSource.Mobile.Core.sln" t="IncludeFlat" />
+      <e p="ChilliSource.Mobile.Core.Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ChilliSource.Mobile.Core.Tests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.0" t="Include">
+              <e p="ChilliSource.Mobile.Core.Tests.AssemblyInfo.cs" t="Include" />
+              <e p="ChilliSource.Mobile.Core.Tests.Program.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="OperationResultTests.cs" t="Include" />
+        <e p="ServiceResultTests.cs" t="Include" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Solution Items" t="Include" />
+    </e>
+  </component>
+</project>

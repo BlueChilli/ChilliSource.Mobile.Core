@@ -197,15 +197,15 @@ Action<string> build = (solution) =>
 	using(BuildBlock("Build")) 
 	{			
 		DirectoryPath vsLatest  = VSWhereLatest();
-		FilePath msBuildPathX64 = (vsLatest==null)
+		FilePath msBuildPath = (vsLatest==null)
                             ? null
-                            : vsLatest.CombineWithFilePath("./MSBuild/15.0/Bin/amd64/MSBuild.exe");
+                            : vsLatest.CombineWithFilePath("./MSBuild/Current/Bin/MSBuild.exe");
 
 		MSBuild(solution, settings => {
 				settings
 				.SetConfiguration(configuration);
 
- 				settings.ToolPath = msBuildPathX64;
+ 				settings.ToolPath = msBuildPath;
 
 				if(isRunningOnUnix) {
 					settings.WithTarget("restore");
@@ -322,7 +322,8 @@ Task("RunUnitTests")
 	{
 		var settings = new DotNetCoreTestSettings
 		{
-			Configuration = configuration
+			Configuration = configuration,
+			NoRestore = true
 		};
 
 		DotNetCoreTest(settings, testProject,  new XUnit2Settings {
